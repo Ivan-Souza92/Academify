@@ -1,0 +1,14 @@
+table{
+  width: 100%;
+}
+
+.edit{
+  color: blue;
+}
+
+.delete{
+  color:red
+}
+.visualizar{
+  color:darkgreen;
+}

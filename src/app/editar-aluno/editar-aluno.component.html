@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Atualizar Aluno</h1>
+  <hr>
+</div>
+
+<div class="container" style="margin-top: 20px;">
+<form>
+  <label>Matricula:</label><br>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Ex.153064" name="matricula" [(ngModel)]="aluno.matricula">
+    </mat-form-field><br>
+    <label>Nome:</label><br>
+    <mat-form-field>
+      <input matInput  name="nome" [(ngModel)]="aluno.nome">
+    </mat-form-field><br>
+
+    <label>Data de Nascimento:</label><br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" [max]="data" name="dataNascimento" [(ngModel)]="aluno.dataNascimento">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>
+    <label>Data de Cadastro:</label><br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="myDatePicker" [max]="data" name="dataCadastro" [(ngModel)]="aluno.dataCadastro">
+      <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+
+    <br>
+    <button type="button" (click)="update()" class="btn btn-primary btn-sm">Editar Aluno</button>
+
+    <a href="listar">
+      <button type="button" class="btn btn-primary btn-sm">Cancelar</button>
+    </a>
+</form>
+</div>

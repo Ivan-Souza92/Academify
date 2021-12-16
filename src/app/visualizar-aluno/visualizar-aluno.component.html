@@ -1,0 +1,36 @@
+
+ <div class="container">
+  <h1>Dados do Aluno</h1>
+  <hr>
+</div>
+
+<div class="container" style="margin-top: 20px;">
+    <form>
+      <label>Matricula:</label><br>
+        <mat-form-field appearance="fill">
+          <input type="text" matInput name="matricula" [(ngModel)]="aluno.matricula" disabled>
+        </mat-form-field><br>
+        <label>Nome:</label><br>
+        <mat-form-field appearance="fill">
+          <input matInput  name="nome" [(ngModel)]="aluno.nome" disabled>
+        </mat-form-field><br>
+
+        <label>Data de Nascimento:</label><br>
+        <mat-form-field appearance="fill">
+          <input matInput [matDatepicker]="picker"  name="dataNascimento" [(ngModel)]="aluno.dataNascimento" disabled >
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field><br>
+        <label>Data de Cadastro:</label><br>
+        <mat-form-field appearance="fill">
+          <input matInput [matDatepicker]="myDatePicker"  name="dataCadastro" [(ngModel)]="aluno.dataCadastro" disabled>
+          <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatePicker></mat-datepicker>
+        </mat-form-field>
+
+        <br>
+        <a href="listar">
+          <button type="button" class="btn btn-primary btn-sm">Voltar a Lista de Alunos</button>
+        </a>
+    </form>
+  </div>

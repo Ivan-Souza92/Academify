@@ -1,0 +1,16 @@
+.container{
+    margin-top: 60px;
+  }
+
+  mat-form-field{
+    width: 80%;
+  }
+
+  button{
+    margin-right: 2rem;
+    margin-top: 35px;
+  }
+
+  label{
+    margin-top: 10px;
+  }
